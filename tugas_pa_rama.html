@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitung Lingkaran</title>
+</head>
+<body>
+
+  <h2>Hitung Lingkaran</h2>
+
+  Jari-jari:
+  <input type="number" id="jari" placeholder="Masukkan angka">
+  <br><br>
+
+  <button onclick="hitungLuas()">Hitung Luas</button>
+  <button onclick="hitungKeliling()">Hitung Keliling</button>
+
+  <div id="hasil"></div>
+
+<script>
+    function hitungLuas(){
+        let r = document.getElementById("jari").value;
+        let phi = 3.14;
+        let luas = phi * r * r;
+
+        document.getElementById("hasil").innerHTML =
+            "L = π x r x r<br>" +
+            "L = " + phi + " x " + r + " x " + r + "<br>" +
+            "L = " + luas.toFixed(2) + " cm²";
+    }
+
+    function hitungKeliling(){
+        let r = document.getElementById("jari").value;
+        let phi = 3.14;
+        let keliling = 2 * phi * r;
+
+        document.getElementById("hasil").innerHTML =
+            "K = 2 x π x r<br>" +
+            "K = 2 x " + phi + " x " + r + "<br>" +
+            "K = " + keliling.toFixed(2) + " cm";
+    }
+</script>
+
+</body>
+</html>
